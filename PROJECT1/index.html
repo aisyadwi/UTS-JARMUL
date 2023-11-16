@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APLIKASI STREAMING RADIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('radio.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-app">
+        <h1>APLIKASI STREAMING RADIO</h1>
+        <audio id="radio-player" controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+        <div class="channel-list">
+            <button class="channel" data-url="https://n06.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABi57PkJsA5Few8HY6JhSRrQ">87.6 FM HARDROCK JAKARTA</button>
+            <button class="channel" data-url="https://stream.cloudmu.id/listen/delta_fm/radio.mp3">Delta Fm | Lagu Terenak</button>
+            <button class="channel" data-url="https://n05.rcs.revma.com/1q762wy5a9hvv?rj-ttl=5&rj-tok=AAABi57S14MAaROi38i1mHBVWg">Radio Ardan 105.9FM</button>
+            <button class="channel" data-url="https://live.nagaswarafm.com:8088/stream">Radio NAGASWARA RADIOTEMEN Bogor</button>
+            <button class="channel" data-url="https://n07.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABi57WvTIAA8zBRC5fAg79Rg">101.4 FM I-Radio JAKARTA</button>
+        </div>
+        <input type="text" id="manual-url" placeholder="Masukkan URL saluran">
+        <button id="play-manual">Play URL</button>
+    </div>
+    <script src="app.js"></script>
+    <script>
+        const radioPlayer = document.getElementById("radio-player");
+        const channels = document.querySelectorAll(".channel");
+        const manualUrlInput = document.getElementById("manual-url");
+        const playManualButton = document.getElementById("play-manual");
+
+        channels.forEach(channel => {
+            channel.addEventListener("click", function() {
+                radioPlayer.src = this.dataset.url;
+                radioPlayer.play();
+            });
+        });
+
+        playManualButton.addEventListener("click", function() {
+            radioPlayer.src = manualUrlInput.value;
+            radioPlayer.play();
+        });
+    </script>
+</body>
+</html>

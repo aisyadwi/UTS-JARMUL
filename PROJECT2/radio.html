@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>Kelompok 7</title>
+
+        <style>
+            body {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                color: white;
+                background-image: url('assets/img/radio.webp');
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .channel-list {
+                display: flex;
+            }
+            .channel {
+                margin: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <!--========== HEADER ==========-->
+        <header class="header">
+            <div class="header__container">
+                <img src="assets/img/b.png" alt="" class="header__img">
+
+                <a href="#" class="header__logo">Aplikasi Streaming Radio</a>
+    
+                
+    
+                <div class="header__toggle">
+                    <i class='bx bx-menu' id="header-toggle"></i>
+                </div>
+            </div>
+        </header>
+
+        <!--========== NAV ==========-->
+        <div class="nav" id="navbar">
+            <nav class="nav__container">
+                <div>
+                    <a href="#" class="nav__link nav__logo">
+                        <i class='bx bxs-disc nav__icon' ></i>
+                        <span class="nav__logo-name">Kelompok 7</span>
+                    </a>
+    
+                    <div class="nav__list">
+                        <div class="nav__items">
+                            <h3 class="nav__subtitle">Menu</h3>
+    
+                            <a href="index.html" class="nav__link">
+                                <i class='bx bx-home nav__icon' ></i>
+                                <span class="nav__name">Home</span>
+                            </a>
+                            <a href="radio.html" class="nav__link active">
+                                <i class='bx bx-radio nav__icon'></i>
+                                <span class="nav__name">Radio</span>
+                            </a>
+                            <a href="image.html" class="nav__link">
+                                <i class='bx bx-images nav__icon'></i>
+                                <span class="nav__name">Convert Image</span>
+                            </a>
+                        </div>
+    
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <!--========== CONTENTS ==========-->
+        <main>
+            <section>
+                <div class="radio-app">
+                    <h1>APLIKASI STREAMING RADIO</h1>
+                    <audio id="radio-player" controls>
+                        <source src="" type="audio/mpeg">
+                      </audio> <br>
+                      <button id="back-channel">Previous</button>
+                      <button id="next-channel">Next</button>
+                      <div class="channel-list">
+                        <button class="channel" data-url="https://n06.radiojar.com/7csmg90fuqruv?rj-ttl=5&rj-tok=AAABi57PkJsA5Few8HY6JhSRrQ">87.6 FM HARDROCK JAKARTA</button>
+                        <button class="channel" data-url="https://stream.cloudmu.id/listen/delta_fm/radio.mp3">Delta Fm | Lagu Terenak</button>
+                        <button class="channel" data-url="https://n05.rcs.revma.com/1q762wy5a9hvv?rj-ttl=5&rj-tok=AAABi57S14MAaROi38i1mHBVWg">Radio Ardan 105.9FM</button>
+                        <button class="channel" data-url="https://live.nagaswarafm.com:8088/stream">Radio NAGASWARA RADIOTEMEN Bogor</button>
+                        <button class="channel" data-url="https://n07.radiojar.com/4ywdgup3bnzuv?rj-ttl=5&rj-tok=AAABi57WvTIAA8zBRC5fAg79Rg">101.4 FM I-Radio JAKARTA</button>
+                      </div>
+                      <input type="text" id="manual-url" placeholder="Masukkan URL saluran" required>
+                      <button id="play-manual" class="urlplay">Play URL</button>
+                </div>
+            </section>
+        </main>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

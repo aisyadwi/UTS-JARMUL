@@ -1,0 +1,58 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+.radio-app {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h1 {
+    color: #333;
+}
+
+.channel-list button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.controls button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+}
+
+#radio-player {
+    width: 100%;
+    margin: 20px 0;
+}
+
+/* Tombol dalam keadaan tidak aktif */
+button {
+    background-color: #ccc; /* Warna latar belakang saat tidak aktif */
+    color: #333; /* Warna teks saat tidak aktif */
+}
+
+button:active {
+    background-color: #007bff; 
+    color: #fff; 
+}
+.channel-list button.active {
+    background-color: #ff0000; /* Ubah warna latar belakang sesuai preferensi Anda */
+    color: #fff; /* Ubah warna teks sesuai preferensi Anda */
+}

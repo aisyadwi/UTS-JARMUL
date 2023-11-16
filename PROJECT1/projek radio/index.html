@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>APLIKASI STREAMING RADIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-image: url('radio.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="radio-app">
+        <h1>APLIKASI STREAMING RADIO</h1>
+        <audio id="radio-player" controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+        <div class="channel-list">
+            <button id="channel1">87.6 FM HARDROCK JAKARTA</button>
+            <button id="channel2">95.5 RASfm Jakarta</button>
+            <button id="channel3">101.4 FM I-Radio JAKARTA</button>
+            <button id="channel4">Pro1 RRI Makassar</button>
+            <button id="channel5">Delta Fm | Lagu Terenak</button>
+        </div>
+        <div class="controls">
+            <button id="play">Play</button>
+            <button id="pause">Pause</button>
+            <button id="stop">Stop</button>
+        </div>
+        <input type="range" id="volume" min="0" max="1" step="0.1" value="1">
+    </div>
+    <script src="app.js"></script>
+    <script>
+        const playButton = document.getElementById("play");
+        const radioPlayer = document.getElementById("radio-player");
+
+        playButton.addEventListener("click", function() {
+            radioPlayer.play();
+        });
+    </script>
+</body>
+</html>

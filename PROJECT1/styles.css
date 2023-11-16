@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.radio-app {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.channel-list {
+    margin: 20px 0;
+}
+
+.channel-list button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.controls {
+    margin: 20px 0;
+}
+
+.controls button {
+    margin: 5px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#volume {
+    width: 100%;
+}
+
+#manual-url {
+    margin-top: 20px;
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#play-manual {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
+}
